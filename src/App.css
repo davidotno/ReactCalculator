@@ -1,0 +1,80 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: white
+}
+
+.container {
+  display: block;
+  width: min-content;
+  height: min-content;
+  margin: 8% auto;
+  background-color: #323035;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.grid-layout {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+.grid-layout>button {
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 5px;
+  outline: none;
+  background-color: #323035;
+}
+
+.grid-layout>button:hover,
+.grid-layout>button:focus {
+  background-color: rgba(17, 17, 46, 0.9);
+}
+
+.spam-two {
+  grid-column: span 2;
+}
+
+.result {
+  grid-column: 1 / -1;
+  background-color: #454249;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.result .previus-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1rem;
+}
+
+.result .current-operand {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.bg-red {
+  background-color: rgba(255, 0, 0, 0.50) !important;
+}
+
+.bg-red:hover,
+.bg-red:focus {
+  background-color: red!important;
+}
